@@ -38,10 +38,12 @@ body::after {
 }
 
 .todo-app {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: start;
-  width: 520px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-width: 50vmax;
   min-height: 500px;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   border-radius: 15px!important;
@@ -53,6 +55,7 @@ body::after {
   margin: 128px auto;
   border-radius: 10px;
   padding-bottom: 32px;
+  z-index: 1;
 }
 
 h1 {
@@ -97,7 +100,6 @@ h1 {
     rgba(155, 0, 250, 1) 100%
   );
   color: #fff;
-  text-transform: capitalize;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
@@ -124,13 +126,14 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 6px auto;
-  width: 80%!important;
+  margin: 5px auto;
+  width: 100%!important;
   color: #fff;
   background: rgba(255, 118, 20, 0.5) 0%;
   padding: 16px;
   border-radius: 5px;
   width: 90%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 .todo-row:nth-child(4n + 1) {
