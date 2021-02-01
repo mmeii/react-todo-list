@@ -6,7 +6,7 @@ function TodoForm(props) {
     const inputRef = useRef(null);
 
     useEffect(() => {
-        inputRef.current.focus()
+        inputRef.current.focus();
     })
 
     const handleSubmit = e => {
@@ -17,7 +17,10 @@ function TodoForm(props) {
             text: input
         });
 
+        console.log(input);
+
         setInput('');
+
     };
 
     const handleChange = e => {
