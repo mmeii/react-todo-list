@@ -1,5 +1,7 @@
 # React Todo List
 
+![License Badge](https://img.shields.io/badge/license-MIT-green) ![Top Language](https://img.shields.io/github/languages/top/mmeii/employee-directory)
+
 A simple todo list app to track your todos by adding, updating and deleting. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Installation
