@@ -2,8 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
+  font-family: 'PT Sans', sans-serif;
 }
 
 body {
@@ -62,6 +61,7 @@ h1 {
   margin: 32px 0;
   color: #fff;
   font-size: 24px;
+  font-family: 'Nunito', sans-serif;
 }
 
 .complete {
@@ -101,6 +101,10 @@ h1 {
   );
   color: #fff;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.todo-button:hover {
+  text-transform: uppercase;
 }
 
 .todo-input.edit {
@@ -158,6 +162,12 @@ h1 {
 .delete-icon {
   margin-right: 5px;
   color: #fff;
+}
+
+.delete-icon:hover,
+.edit-icon:hover {
+  font-size: larger;
+  color:#a882f3;
 }
 
 .edit-icon {
