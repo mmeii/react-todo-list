@@ -3,7 +3,7 @@ import TodoForm from './TodoForm';
 import Todo from './Todo';
 
 function TodoList() {
-    const [todos, setTodos] = useState([]);
+    const [todos, setTodos] = useState({});
 
     const LOCAL_STORAGE_KEY = "react-do-list-todos";
 
