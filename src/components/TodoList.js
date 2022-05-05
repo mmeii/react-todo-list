@@ -3,17 +3,15 @@ import TodoForm from './TodoForm';
 import Todo from './Todo';
 
 function TodoList() {
-    const [todos, setTodos] = useState([]);
+    const [todos, setTodos] = useState({});
 
     const LOCAL_STORAGE_KEY = "react-do-list-todos";
 
     useEffect(() => {
-        const storageTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+        const storageTodos = localStorage.getItem(LOCAL_STORAGE_KEY);
 
-        if (storageTodos) {
-            setTodos(storageTodos)
-        }
-    }, []);
+        setTodos(storageTodos)
+    });
 
     useEffect(() => {
         localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos));
@@ -39,13 +37,13 @@ function TodoList() {
     }
 
     const removeTodo = id => {
-        const removeArr = [...todos].filter(todo => todo.id !== id);
+        const removeArr = [todos].filter(todo => todo.id !== id);
 
         setTodos(removeArr);
     };
 
     const completeTodo = id => {
-        let updatedTodos = todos.map(todo => {
+        let updatedTodos = todos.each(todo => {
             if (todo.id === id) {
                 todo.isComplete = !todo.isComplete
             }

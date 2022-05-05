@@ -7,7 +7,7 @@ function TodoForm(props) {
 
     useEffect(() => {
         inputRef.current.focus();
-    })
+    },[])
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -37,8 +37,8 @@ function TodoForm(props) {
                         value={input}
                         name="text"
                         className="todo-input edit"
-                        onChange={handleChange}
-                        ref={inputRef}
+                        onChange={handleChange()}
+                     
                     />
                     <button onClick={handleSubmit} className="todo-button edit">Update</button>
                 </>
@@ -50,10 +50,10 @@ function TodoForm(props) {
                         value={input}
                         name="text"
                         className="todo-input"
-                        onChange={handleChange}
-                        ref={inputRef}
+                        onChange={handleChange()}
+                     
                     />
-                    <button onClick={handleSubmit} className="todo-button">Add todo</button>
+                    <button onClick={handleSubmit()} className="todo-button">Add todo</button>
                 </>
             )}
         </form >
