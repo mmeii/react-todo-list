@@ -8,7 +8,7 @@ function TodoList() {
     const LOCAL_STORAGE_KEY = "react-do-list-todos";
 
     useEffect(() => {
-        const storageTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+        const storageTodos = localStorage.getItem(LOCAL_STORAGE_KEY);
 
         if (storageTodos) {
             setTodos(storageTodos)
